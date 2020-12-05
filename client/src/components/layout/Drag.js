@@ -23,7 +23,7 @@ const grid = 9;
 const getItemStyle = (isDragging, draggableStyle) => ({
   userSelect: 'none',
   padding: grid * 7,
-  margin: `0 ${grid}px 0 10px`, //#2A3EB1
+  margin: `0 ${grid}px 0 0px`, //#2A3EB1
   color: 'white',
   background: isDragging ? '#ff0266' : 'rgb(0,0,0,0.8)',
   borderRadius: '20px',
@@ -46,6 +46,21 @@ export default class Drag extends Component {
       items: getItems(6),
     };
     this.onDragEnd = this.onDragEnd.bind(this);
+  }
+
+  componentDidMount(){
+      var data = [
+          {"id": "item-0", content: 'Morning Jog'},
+          {"id": "item-1", content: 'Hackathons'},
+          {"id": "item-2", content: 'JP Morgan'},
+          {"id": "item-3", content: 'Coding'},
+          {"id": "item-4", content: 'React and Js'},
+        
+        
+        ];
+      this.setState({
+          items: data
+      })
   }
 
   onDragEnd(result) {
@@ -90,7 +105,7 @@ export default class Drag extends Component {
                       )}
                     >
                     
-                      {item.content} <br/>
+                      {item.content}<br/><br/>
                       <i class="fas fa-plus-circle fa-2x " style={{color: 'white'}}></i>
 
 

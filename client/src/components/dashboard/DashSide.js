@@ -187,7 +187,7 @@ export default function DashSide() {
             }}>
             <div style={{padding: '10px', cursor: 'pointer'}}>
             <br/>
-            <div style={{marginTop: '-20px'}}>
+            <div style={{marginTop: '-60px'}}>
             <Drag/>
             <Drag/>
             </div>
