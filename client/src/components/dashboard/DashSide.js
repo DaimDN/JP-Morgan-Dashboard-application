@@ -1,6 +1,12 @@
 import { color } from 'highcharts'
 import React from 'react'
 import './dashside.css';
+import Drag from '../layout/Drag';
+
+
+
+
+
 export default function DashSide() {
     const [dock, setDock] = React.useState(false);
 
@@ -9,6 +15,7 @@ export default function DashSide() {
     const [Task, setTask] = React.useState(false);
 
     const [Profile, setProfile] = React.useState(false);
+    const [Apps, setApps] = React.useState(false);
     return (
         <div>
         <div style={{
@@ -28,6 +35,13 @@ export default function DashSide() {
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav mx-auto">
                 <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
+                    <a class="nav-link" onClick={()=> setApps(!Apps)} href="#!">
+                    <i style={{fontSize: '15px'}} class="fab fa-app-store-ios"></i>
+                    </a>
+                    <p  className="" style={{color: 'white', fontSize: '9px'}}>Apps</p>
+                </li>
+
+                <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
                     <a class="nav-link" href="/">
                     <i style={{fontSize: '15px'}} class="fas fa-home"></i>
                     </a>
@@ -35,19 +49,19 @@ export default function DashSide() {
                 </li>
                
                 <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
-                    <a class="nav-link" href="#!" onClick={() => setTask(true)}>
+                    <a class="nav-link" href="#!" onClick={() => setTask(!Task)}>
                     <i style={{fontSize: '15px'}} class="now-ui-icons location_map-big"></i>
                     </a>
                     <p style={{color: 'white', fontSize: '9px'}}>Tasks</p>
                 </li>
                 <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
-                    <a class="nav-link" href="#!" onClick={() => setProfile(true)}>
+                    <a class="nav-link" href="#!" onClick={() => setProfile(!Profile)}>
                     <i style={{fontSize: '15px'}}  className="x" class="now-ui-icons users_single-02"></i>
                     </a>
                     <p style={{color: 'white', fontSize: '9px'}}>Profile</p>
                 </li>
                 <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
-                    <a class="nav-link" onClick={() => setnotification(true)} href="#!">
+                    <a class="nav-link" onClick={() => setnotification(!notification)} href="#!">
                     <i style={{fontSize: '15px'}} class="now-ui-icons ui-1_bell-53"></i>
                     </a>
                     <p  style={{color: 'white', fontSize: '9px'}}>Notification</p>
@@ -61,7 +75,7 @@ export default function DashSide() {
                 </li>
                 
                 <li class="nav-item v " style={{margin: '0px 20px'}}>
-                    <a class="nav-link" href="#!" onClick={() => setDock(true)}>
+                    <a class="nav-link" href="#!" onClick={() => setDock(!dock)}>
                     <img 
                 style={{width:'37px', borderRadius: '50%'}}
                 src="https://avatars0.githubusercontent.com/u/17266803?s=460&u=4c801c80490fbe466e6d6a1db2c9f3759c4981e9&v=4"
@@ -94,21 +108,89 @@ export default function DashSide() {
             </div>
         ) : (<div></div>)}
 
-        {Task? (
+
+        {Apps ? (
             
             <div style={{
                 position: 'fixed',
-                width: '85vw',
-                height: '30vh',
+                width: '40vw',
+                height: '50vh',
+                left: '27vw',
+                bottom: '120px',
                 backgroundColor: 'rgb(0, 0, 0, 0.8)',
                 zIndex: '600',
                 borderRadius: '40px'
     
             }}>
             <div style={{padding: '10px', cursor: 'pointer'}}>
-            <i onClick={()=> setTask(false)} style={{color: 'whitesmoke'}} class="fas fa-2x fa-times-circle"></i>
+            <div className="container">
+            <ul class="navbar-nav mx-auto">
+            
+            <div className="row text-white">
+            <div className="col-3">
+            <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
+                    <a class="nav-link" href="/sling">
+                    <i style={{fontSize: '18px'}} className="fas fa-rocket" ></i>
+                    
+                    </a>
+                    <p style={{color: 'white', fontSize: '10px'}}>Sling</p>
+                </li>
+           
+            </div>
+            <div className="col-3">
+            <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
+                    <a class="nav-link" href="/sling">
+                    <i style={{fontSize: '18px'}} className="fas fa-rocket" ></i>
+                    
+                    </a>
+                    <p style={{color: 'white', fontSize: '10px'}}>Sling</p>
+                </li>
+            
+            </div>
+            <div className="col-3">
+            <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
+                    <a class="nav-link" href="/sling">
+                    <i style={{fontSize: '18px'}} className="fas fa-rocket" ></i>
+                    
+                    </a>
+                    <p style={{color: 'white', fontSize: '10px'}}>Sling</p>
+                </li>
+          
+            </div>
+            <div className="col-3">
+            <li class="nav-item active v text-center" style={{margin: '0px 2px'}}>
+                    <a class="nav-link" href="/sling">
+                    <i style={{fontSize: '18px'}} className="fas fa-rocket" ></i>
+                    
+                    </a>
+                    <p style={{color: 'white', fontSize: '10px'}}>Sling</p>
+                </li>
+                
+           
+            </div>
+             </div>
+             </ul>
+            </div>
+            </div>
+            </div>
+        ) : (<div></div>)}
+
+        {Task? (
+            
+            <div style={{
+                position: 'fixed',
+                width: '99vw',
+                height: '67vh',
+                zIndex: '600',
+                borderRadius: '40px'
+    
+            }}>
+            <div style={{padding: '10px', cursor: 'pointer'}}>
             <br/>
-            <h1 className="text-white text-center"> No Current Task</h1>
+            <div style={{marginTop: '-20px'}}>
+            <Drag/>
+            <Drag/>
+            </div>
             </div>
             </div>
         ) : (<div></div>)}

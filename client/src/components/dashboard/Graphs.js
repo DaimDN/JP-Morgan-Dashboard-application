@@ -44,14 +44,11 @@ const Dashboard = ({
       </div>
       </div>
      </div>
+</h2>
     
      
      
-          </h2>
-          <h4> 
-          <Clock format={"dddd, MMMM Do YYYY"} ticking={true} timezone={'Europe/Belfast'} /> </h4>
-    <Sidebar />
-    <br/>
+      
   
     <Tabs/>
     

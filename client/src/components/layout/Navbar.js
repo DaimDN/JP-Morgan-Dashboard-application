@@ -115,6 +115,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   );
 
   return (
+    //#2a3eb1
    <div>
     <Fragment className="main-panel" id="main-panel">
       <nav  className="navbar navbar-expand-lg " style={{backgroundColor: '#2a3eb1'}}>
