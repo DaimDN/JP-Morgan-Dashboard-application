@@ -10,9 +10,8 @@ import MyChart from './charts/chart3';
 import Chart4 from './charts/chart4';
 import Clock from 'react-live-clock';
 import DashSide from './DashSide';
-import Verticalnavbar from './verticalnavbar';
-import Footer from './footer';
-import Chart5 from './charts/chart5';
+import './dashside.css'
+
 
 
 
@@ -27,42 +26,87 @@ const Dashboard = ({
 
   return (
     <Fragment>
+   
     <div class="">
-    <DashSide/>
-     <h2 style={{fontWeight: '700'}}>
-     DASHBOARD
-     
-     
+    <div style={{
+       fontWeight: '600',
+       position: 'fixed',
+       width: '100vw',
+       right: '0',
+       zIndex: '200',
+       top: '-10px',
+       height: '200vh',
+       backgroundColor: 'rgb(0, 0, 0, 0.8)',
+       
+       
+       }}>
+
+       <div className="container" style={{
+         position: 'absolute', 
+         marginTop: '20vh',
+         zIndex: '400', 
+         marginLeft: '12%',
+         color: 'black'
+         
+         
+         }}>
+        <div className="row">
+          <div className="col-3 g text-center">
+          <img
+              src="https://www.flaticon.com/svg/static/icons/svg/3011/3011270.svg"
+              style={{width: '25%'}}
+              alt="nothing"
+               />
+               <br/>
+               <br/>
+              <h3 className="lead" style={{color: 'white', fontWeight: '800'}}>Profile Settings</h3>
+          </div>
+          <div className="col-3 g text-center">
+          <img
+              src="https://www.flaticon.com/svg/static/icons/svg/3869/3869457.svg"
+              style={{width: '25%'}}
+              alt="nothing"
+               />
+               <br/>
+               <br/>
+              <h3 className="lead" style={{color: 'white' , fontWeight: '800'}}>Charts Settings</h3>
+          </div>
+          <div className="col-3 g text-center" > 
+          <img
+              src="https://www.flaticon.com/svg/static/icons/svg/900/900834.svg"
+              style={{width: '25%'}}
+              alt="nothing"
+               />
+               <br/>
+               <br/>
+              <h3 className="lead" style={{color: 'white' , fontWeight: '800'}}>App Settings</h3>
+          
+          
+          </div>
+          
+          <br/>
+          
+        </div>
+
+         
+
+        
+
+
+
+
+       </div>
+
+
+
+    </div>
+    <div style={{zIndex: '300', position:'absolute'}}><DashSide/></div>
+     <h2 >
+     JP MORGAN DASHBOARD
           </h2>
-          <h4> 
-          <Clock format={"dddd, MMMM Do YYYY, h:mm:ss a"} ticking={true} timezone={'Europe/Belfast'} /> </h4>
+          <h4> <Clock format={"dddd, MMMM Do YYYY, h:mm:ss a"} ticking={true} timezone={'Europe/Belfast'} /></h4>
     <Sidebar />
     <br/>
-    <div className="row">
-
-    <div className="col-8">
-    <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-category">Global Sales</h5>
-                <h4 class="card-title">Current Stock</h4>
-                <Chart5/>
-               
-                </div>
-                </div>
-    </div>
-    <div className="col-4">
-    <div class="card card-chart">
-              <div class="card-header">
-                <h5 class="card-category">Global Sales</h5>
-                <h4 class="card-title">Market</h4>
-                <Chart1/>
-               
-                </div>
-                </div>
- 
-    
-    </div>
-    </div>
     
     <div className="row">
 
@@ -120,7 +164,7 @@ const Dashboard = ({
                 <h5 class="card-category">GDP</h5>
                 <h4 class="card-title">JP Morgan</h4>
                 <Chart4/>
-              
+               
                
                 </div>
                 </div>
@@ -129,9 +173,9 @@ const Dashboard = ({
  
       
     </div>
-    <Footer/>
+    </div>
       
-      </div>
+    
     
       {profile !== null ? (
         <Fragment>

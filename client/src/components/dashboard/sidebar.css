@@ -4,7 +4,13 @@ p{
 
 .x:hover{
     background-color: #F48FB1    ;
-    border-radius: 5px;
+    border-radius: 20px !important;
     color: white !important;
-    text-align: center;
+    text-decoration: none !important;
+   
+}
+
+
+.lead{
+    font-size: 14px !important;
 }

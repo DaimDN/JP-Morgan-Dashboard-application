@@ -6,6 +6,8 @@ import Alert from '../layout/Alert';
 import Dashboard from '../dashboard/Dashboard';
 import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
+import Sling from '../dashboard/Sling';
+import Settings from '../dashboard/settings';
 
 const Routes = props => {
   return (
@@ -15,6 +17,8 @@ const Routes = props => {
         <Route exact path="/register" component={Register} />
         <Route exact path="/login" component={Login} />
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
+        <PrivateRoute exact path="/sling" component={Sling} />
+        <PrivateRoute exact path="/settings" component={Settings} />
         <Route component={NotFound} />
       </Switch>
     </section>

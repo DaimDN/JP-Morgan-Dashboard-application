@@ -4,12 +4,18 @@ import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
 import { logout } from '../../actions/auth';
 
+
+
 const Navbar = ({ auth: { isAuthenticated }, logout }) => {
+  
+  const [hidden, setHidden] = React.useState(false);
+  const [auth, setLogout] = React.useState(false);
+ 
   const authLinks = (
    <Fragment>
   <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav ml-auto">
-    <li class="nav-item">
+    <li class="nav-item active">
                 <a class="nav-link" style={{fontSize: '13px', fontWeight: '800'}} href="/">Dashboard</a>
               </li>
 
@@ -32,19 +38,38 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
                   
                 </a>
               </li>
-            
-             
               <li class="nav-item">
                 <a class="nav-link" href="#pablo">
                  
                   <p>
-                  <i class="now-ui-icons ui-1_zoom-bold"></i>
+                  <i class="far fa-comment fa-2x"></i>
+                  </p>
+                </a>
+              </li>
+            
+             
+              <li class="nav-item">
+                <a class="nav-link" onClick={() => setHidden(true)}  href="#!">
+                 
+                  <p>
+                  <i class="fas fa-search fa-2x"></i>
+                  </p>
+                </a>
+              </li>
+              
+              <li class="nav-item">
+                <a class="nav-link" href="#pablo">
+                 
+                  <p>
+                  <i class="fas fa-bell fa-2x"></i>
+
+
                   </p>
                 </a>
               </li>
       
                <li class="nav-item">
-                <a class="nav-link active" onClick={logout} href="#!">
+                <a class="nav-link active" onClick={() => setLogout(true)} href="#!">
                 <img 
                 style={{width:'30px', borderRadius: '50%'}}
                 src="https://avatars0.githubusercontent.com/u/17266803?s=460&u=4c801c80490fbe466e6d6a1db2c9f3759c4981e9&v=4"
@@ -52,10 +77,10 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
                  />
                 </a>
               </li>
-
              
       
     </ul>
+
 
     
   </div>
@@ -87,7 +112,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   return (
    <div>
     <Fragment className="main-panel" id="main-panel">
-      <nav  className="navbar navbar-expand-lg   bg-primary bg-dark">
+      <nav  className="navbar navbar-expand-lg " style={{backgroundColor: '#2a3eb1'}}>
       <a
        class="navbar-brand"
        style={{fontWeight: '900', fontSize: '17px'}}
@@ -95,9 +120,105 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
         >Dashboard</a>        
      <Fragment>{isAuthenticated ? authLinks : guestLinks}</Fragment>
       </nav>
-      
+      {hidden ? (
+        <div >
+        <div  style={{
+       fontWeight: '600',
+       position: 'fixed',
+       width: '100vw',
+       right: '0',
+       zIndex: '200',
+       top: '-10px',
+       height: '200vh',
+       backgroundColor: 'rgb(0, 0, 0, 0.8)',
+       
+       
+       }}>
+
+       <div className="container" style={{
+         position: 'absolute', 
+         marginTop: '20vh',
+         zIndex: '400', 
+         marginLeft: '12%',
+         color: 'black'
+         
+         
+         }}>
+
+         <form>
+          <div className="row">
+            <div className="col-lg-8">
+            <input className="form-control" 
+            style={{height: '50px', fontSize: '19px', position: 'absolute', bottom: '10px'}}
+            placeholder="Search Query"
+
+            />
+            </div>
+            <div className="col-lg-4">
+              <button className="btn btn-primary btn-lg">Search</button>
+              <a href="/dashboard" className="btn btn-black btn-lg">Cancel</a>
+            </div>
+          </div>
+         </form>
+
+
+           </div>
+
+         </div>
+
+        </div>
+
+      ) : (<div>
+
+      </div>)}
+
+      {auth ? (
+        <div>
+        <div style={{
+       fontWeight: '600',
+       position: 'fixed',
+       width: '100vw',
+       right: '0',
+       zIndex: '200',
+       top: '-10px',
+       height: '200vh',
+       backgroundColor: 'rgb(0, 0, 0, 0.8)',
+       
+       
+       }}>
+
+       <div className="container" style={{
+         position: 'absolute', 
+         marginTop: '20vh',
+         zIndex: '400', 
+         marginLeft: '16%',
+         color: 'black'
+         
+         
+         }}>
+
+         <div>
+         <h3 className="text-white">Do you want to Logout ?</h3>
+          <br/> <br/>
+          <a href="/dashboard" className="btn btn-white btn-lg">Cancel</a>
+          <button onClick={logout}  className="btn btn-danger btn-lg">Logout</button>
+         </div>
+
+
+           </div>
+
+         </div>
+
+        </div>
+
+      ) : (<div>
+
+      </div>)}
     </Fragment>
-   
+
+
+  
+       
     </div>
     
   );

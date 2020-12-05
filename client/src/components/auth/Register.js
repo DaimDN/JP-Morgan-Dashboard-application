@@ -32,19 +32,23 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
   return (
     <Fragment>
       <div className="row">
-    <div className="col-7" style={{}}>
+    <div className="col-6" style={{}}>
     <img 
-      style={{marginTop: '5vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%'}}
+      style={{marginTop: '5vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%',
+      boxShadow : '0px 0px 10px 2px black'
+      }}
       src="https://cdn.vox-cdn.com/thumbor/xox_VT-NMs0nkZ9Wlg6lwi1S7Wg=/0x0:2000x1600/1200x800/filters:focal(840x640:1160x960)/cdn.vox-cdn.com/uploads/chorus_image/image/64147294/180420_12_28_42_5DSR2360.0.jpg"
       alt="new"
       />
     </div>
 
-    <div className="col-5">
+    <div className="col-6">
+    <div class="card card-chart" style={{padding: '60px'}}>
+              <div class="card-header">
     <div style={{margin: 'auto'}}>
     <div style={{}}>
       <h1 className="large text-primary">Register</h1>
-      <p className="lead">
+      <p className="" style={{fontSize: '20px'}}>
          JP Morgan - Create Account
       </p>
       <form className="form" onSubmit={onSubmit}>
@@ -111,6 +115,7 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
      
       </div>
     </div>
+    </div></div>
 
 
     </div>

@@ -1,0 +1,9 @@
+.v:hover{
+    transform: scale(1.2);
+    border-radius: 50% !important;
+}
+
+.g:hover{
+    cursor: pointer;
+    transform: scale(1.3);
+}

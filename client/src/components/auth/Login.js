@@ -28,19 +28,22 @@ const Login = ({ login, isAuthenticated }) => {
     <Fragment>
 
     <div className="row">
-    <div className="col-7" style={{}}>
+    <div className="col-6" style={{}}>
     <img 
-      style={{marginTop: '5vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%'}}
+      style={{marginTop: '5vh', marginRight: '20vw', height: '350px', width: '400px', borderRadius: '50%',
+      boxShadow : '0px 0px 10px 2px black'}}
       src="https://www.ledgerinsights.com/wp-content/uploads/2019/04/jpmorgan.3.jpg"
       alt="new"
       />
     </div>
 
-    <div className="col-5">
+    <div className="col-6">
+    <div class="card card-chart" style={{padding: '60px'}}>
+              <div class="card-header">
     <div style={{margin: 'auto'}}>
-      <h1 className="large text-primary">Login</h1>
-      <p className="lead" style={{}}>
-        <i style={{color: 'orange'}} /> JP Morgan - Login Panel
+      <h1 className="large text-primary">Account</h1>
+      <p className="" style={{fontSize: '20px'}}>
+         JP Morgan - Login Panel
       </p>
       <br/>
       <form className="form" onSubmit={onSubmit}>
@@ -69,10 +72,12 @@ const Login = ({ login, isAuthenticated }) => {
         <br/>
         <input type="submit" className="btn btn-primary" value="Login" />
       </form>
-      <p className="my-1">
+      <p className="my-2" style={{}}>
         Don't have an account? <Link to="/register">Sign Up</Link>
       </p>
       </div>
+    </div>
+    </div>
     </div>
 
 
