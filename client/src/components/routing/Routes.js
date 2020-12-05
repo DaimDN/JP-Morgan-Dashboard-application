@@ -8,6 +8,7 @@ import NotFound from '../layout/NotFound';
 import PrivateRoute from '../routing/PrivateRoute';
 import Sling from '../dashboard/Sling';
 import Settings from '../dashboard/settings';
+import Graphs from '../dashboard/Graphs';
 
 const Routes = props => {
   return (
@@ -19,6 +20,7 @@ const Routes = props => {
         <PrivateRoute exact path="/dashboard" component={Dashboard} />
         <PrivateRoute exact path="/sling" component={Sling} />
         <PrivateRoute exact path="/settings" component={Settings} />
+        <PrivateRoute exact path="/graphs" component={Graphs} />
         <Route component={NotFound} />
       </Switch>
     </section>

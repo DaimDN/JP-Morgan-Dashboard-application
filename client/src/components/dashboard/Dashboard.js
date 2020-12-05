@@ -25,17 +25,30 @@ const Dashboard = ({
     getCurrentProfile();
   }, [getCurrentProfile]);
 
+ 
+
   return (
     <Fragment>
     <div class="">
     <DashSide/>
      <h2 style={{fontWeight: '700'}}>
-     DASHBOARD
+     <div className="row">
+       <div className="col-9"> <img style={{width: '40%'}} src="https://www.jpmorgan.com/content/dam/shared/logos/logos-cb-jpm.svg"
+      alt="" /> </div>
+      <div className="col-3">
+      <div style={{marginTop: '-20px'}}> 
+     <h4 
+     style={{fontSize: '38px', fontWeight: '500', fontFamily: 'Ubuntu, sans-serif'}}
+      className=""> <Clock format={"h:mm:ss a"} ticking={true} timezone={'Europe/Belfast'} /> </h4>
+      </div>
+      </div>
+     </div>
+    
      
      
           </h2>
           <h4> 
-          <Clock format={"dddd, MMMM Do YYYY, h:mm:ss a"} ticking={true} timezone={'Europe/Belfast'} /> </h4>
+          <Clock format={"dddd, MMMM Do YYYY"} ticking={true} timezone={'Europe/Belfast'} /> </h4>
     <Sidebar />
     <br/>
     <div className="row">

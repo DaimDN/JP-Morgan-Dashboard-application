@@ -47,10 +47,11 @@ const Register = ({ setAlert, register, isAuthenticated }) => {
               <div class="card-header">
     <div style={{margin: 'auto'}}>
     <div style={{}}>
-      <h1 className="large text-primary">Register</h1>
-      <p className="" style={{fontSize: '20px'}}>
-         JP Morgan - Create Account
-      </p>
+    <img style={{width: '70%'}} src="https://www.jpmorgan.com/content/dam/shared/logos/logos-cb-jpm.svg"
+      alt="" />
+      <h1 style={{fontSize: '22px'}} className="text-primary">Register Account</h1>
+    
+     
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">
           <input

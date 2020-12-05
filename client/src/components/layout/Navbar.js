@@ -10,6 +10,8 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
   
   const [hidden, setHidden] = React.useState(false);
   const [auth, setLogout] = React.useState(false);
+
+
  
   const authLinks = (
    <Fragment>
@@ -93,7 +95,10 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
        <div className="collapse navbar-collapse" id="navbarNav">
     <ul className="navbar-nav ml-auto">
       <li className="nav-item active">
-        <Link class="nav-link" to="/">Home</Link>
+        <Link class="nav-link" to="/">Privacy Policy</Link>
+      </li>
+      <li className="nav-item active">
+        <Link class="nav-link" to="/">Terms and Conditions</Link>
       </li>
       
       <li className="nav-item">
@@ -134,6 +139,11 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
        
        
        }}>
+         <div style={{padding: "30px"}}>
+         <a href="/dashboard">
+         <i  style={{color: 'whitesmoke'}} class="fas fa-2x fa-times-circle"></i>
+         </a>
+         </div>
 
        <div className="container" style={{
          position: 'absolute', 
@@ -156,7 +166,7 @@ const Navbar = ({ auth: { isAuthenticated }, logout }) => {
             </div>
             <div className="col-lg-4">
               <button className="btn btn-primary btn-lg">Search</button>
-              <a href="/dashboard" className="btn btn-black btn-lg">Cancel</a>
+             
             </div>
           </div>
          </form>

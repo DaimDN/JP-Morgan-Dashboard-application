@@ -13,11 +13,22 @@ const Landing = ({ isAuthenticated }) => {
     <section className='landing container'>
       <div className='dark-overlay'>
         <div className='landing-inner'>
-          <h1 className='x-large'>JP Morgan Chase and Co</h1>
-          <p className='lead'>
+
+        <div className="row">
+          <div className="col-7">
+          <div style={{marginTop: '16vh'}}>
+          <img style={{width: '80%'}} src="https://www.jpmorgan.com/content/dam/shared/logos/logos-cb-jpm.svg"
+      alt="" />
+     
+         
+          <p style={{fontSize: '20px'}} className=''>
             This Application is a Sole Property of Daim. 
           </p>
+         <hr/>
+        
          
+       
+
           <div className='buttons'>
             <Link to='/register' className='btn btn-primary'>
               Sign Up
@@ -25,11 +36,18 @@ const Landing = ({ isAuthenticated }) => {
             <Link to='/login' className='btn btn-light'>
               Login
             </Link>
+            
           </div>
-          <img
+          </div>
+          </div>
+          <div className="col-5">
+            
+          <img style={{borderRadius: '50%', width: '400px', height: '400px'}}
             src={Logo}
             alt= ""
           />
+          </div>
+         </div>
         </div>
       </div>
     </section>

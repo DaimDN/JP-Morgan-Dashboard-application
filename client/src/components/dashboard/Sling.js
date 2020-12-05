@@ -40,7 +40,15 @@ const Dashboard = ({
        
        
        }}>
-
+      <div style={{
+        padding: '30px',
+        position: 'absolute',
+        zIndex: '600'
+      }}>
+      <a href="/dashboard">
+     <i style={{color: 'white', cursor: 'pointer'}} class="fas fa-2x fa-times-circle"></i>
+     </a>
+      </div>
        <div className="container" style={{
          position: 'absolute', 
          marginTop: '20vh',
@@ -73,6 +81,7 @@ const Dashboard = ({
               <h5 className="lead" style={{color: 'white' , fontWeight: '800'}}>Charts</h5>
           </div>
           <div className="col-3 g text-center" > 
+          <a href="/graphs">
           <img
               src="https://www.flaticon.com/svg/static/icons/svg/2257/2257295.svg"
               style={{width: '20%'}}
@@ -81,7 +90,7 @@ const Dashboard = ({
                <br/>
                <br/>
               <h5 className="lead" style={{color: 'white' , fontWeight: '800'}}>Graphs</h5>
-          
+          </a>
           
           </div>
           <div className="col-3 g text-center" > 
@@ -114,7 +123,7 @@ const Dashboard = ({
           
           
           </div>
-          <div className="col-6 g mx-auto" > 
+          <div className="col-6 g " > 
           <img
               src="https://www.flaticon.com/svg/static/icons/svg/599/599305.svg"
               style={{width: '13%'}}
@@ -122,7 +131,7 @@ const Dashboard = ({
                />
                <br/>
                <br/>
-              <h5 className="lead" style={{color: 'white' , fontWeight: '800'}}>Profile</h5>
+              <h5 style={{textAlign: 'center'}} className="lead" style={{color: 'white' , fontWeight: '800'}}>Profile</h5>
           </div>
           
           </div>

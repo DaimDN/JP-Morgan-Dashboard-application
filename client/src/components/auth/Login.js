@@ -41,10 +41,12 @@ const Login = ({ login, isAuthenticated }) => {
     <div class="card card-chart" style={{padding: '60px'}}>
               <div class="card-header">
     <div style={{margin: 'auto'}}>
-      <h1 className="large text-primary">Account</h1>
-      <p className="" style={{fontSize: '20px'}}>
-         JP Morgan - Login Panel
-      </p>
+    <img style={{width: '70%'}} src="https://www.jpmorgan.com/content/dam/shared/logos/logos-cb-jpm.svg"
+      alt="" />
+      <h1 style={{fontSize: '22px'}} className="text-primary">Account</h1>
+    
+     
+     
       <br/>
       <form className="form" onSubmit={onSubmit}>
         <div className="form-group">

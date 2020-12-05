@@ -3,14 +3,21 @@ p{
 }
 
 .x:hover{
-    background-color: #F48FB1    ;
+    transform: scale(1.2);
     border-radius: 20px !important;
-    color: white !important;
     text-decoration: none !important;
+    cursor: pointer;
    
+}
+
+.x{
+    font-family: 'Ubuntu', sans-serif;
+    font-size: 18px !important;
+    text-decoration: none !important;
 }
 
 
 .lead{
-    font-size: 14px !important;
+    font-size: 8px !important;
+
 }

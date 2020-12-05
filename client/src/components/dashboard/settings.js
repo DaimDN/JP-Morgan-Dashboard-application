@@ -40,7 +40,15 @@ const Dashboard = ({
        
        
        }}>
-
+<div style={{
+        padding: '30px',
+        position: 'absolute',
+        zIndex: '600'
+      }}>
+      <a href="/dashboard">
+     <i style={{color: 'white', cursor: 'pointer'}} class="fas fa-2x fa-times-circle"></i>
+     </a>
+      </div>
        <div className="container" style={{
          position: 'absolute', 
          marginTop: '20vh',
