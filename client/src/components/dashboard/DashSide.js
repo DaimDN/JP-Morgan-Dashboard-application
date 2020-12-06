@@ -244,7 +244,7 @@ export default function DashSide() {
           <div className="col-3 g text-center">
           <img
               src="https://www.flaticon.com/svg/static/icons/svg/610/610106.svg"
-              style={{width: '20%'}}
+              style={{width: '30%'}}
               alt="nothing"
                />
                <br/>
@@ -254,7 +254,7 @@ export default function DashSide() {
           <div className="col-3 g text-center">
           <img
               src="https://www.flaticon.com/svg/static/icons/svg/3408/3408591.svg"
-              style={{width: '20%'}}
+              style={{width: '30%'}}
               alt="nothing"
                />
                <br/>
@@ -265,7 +265,7 @@ export default function DashSide() {
           <a href="/graphs">
           <img
               src="https://www.flaticon.com/svg/static/icons/svg/2257/2257295.svg"
-              style={{width: '20%'}}
+              style={{width: '30%'}}
               alt="nothing"
                />
                <br/>
@@ -277,7 +277,7 @@ export default function DashSide() {
           <div className="col-3 g text-center" > 
           <img
               src="https://www.flaticon.com/svg/static/icons/svg/1828/1828673.svg"
-              style={{width: '20%'}}
+              style={{width: '30%'}}
               alt="nothing"
                />
                <br/>

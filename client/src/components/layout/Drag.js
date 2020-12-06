@@ -52,7 +52,7 @@ export default class Drag extends Component {
       var data = [
           {"id": "item-0", content: 'Morning Jog'},
           {"id": "item-1", content: 'Hackathons'},
-          {"id": "item-2", content: 'JP Morgan'},
+          {"id": "item-2", content: "Working "},
           {"id": "item-3", content: 'Coding'},
           {"id": "item-4", content: 'React and Js'},
         
@@ -107,6 +107,7 @@ export default class Drag extends Component {
                     
                       {item.content}<br/><br/>
                       <i class="fas fa-plus-circle fa-2x " style={{color: 'white'}}></i>
+                     
 
 
                     </div>

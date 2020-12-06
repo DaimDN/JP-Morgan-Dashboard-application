@@ -55,10 +55,6 @@ const date = new Date();
 const today = date.toLocaleDateString().split("/").join("");
 const path = './files/' + today + ".csv";
 
-var localFileStream= hdfs.createWriteStream(path);
-var remoteFileStream = hdfs.createWriteStream(path);
-
-
   if (fs.existsSync(path)) {
     var filename = path;
     csv()
@@ -69,9 +65,12 @@ var remoteFileStream = hdfs.createWriteStream(path);
                 if (error) throw error;
             
                 const MYSQLdata = JSON.parse(JSON.stringify(data));
+                
 
                 if (MYSQLdata.length == CsvFileData.length){
                     console.log("File is already there");
+                    var localFileStream= fs.createReadStream(path);
+                    var remoteFileStream = hdfs.createWriteStream(path);
                     
                     localFileStream.pipe(remoteFileStream);
  
@@ -80,9 +79,8 @@ var remoteFileStream = hdfs.createWriteStream(path);
                     });
                     
                     remoteFileStream.on('finish', function onFinish () {
-                            console.log("finshed");
-                    });
-                      
+                            console.log("finished");
+                    });              
                 }
                 else{
                     const ws = fs.createWriteStream(path);
@@ -92,15 +90,7 @@ var remoteFileStream = hdfs.createWriteStream(path);
                       if (error) throw error;
                   
                       const jsonData = JSON.parse(JSON.stringify(data));
-                      localFileStream.pipe(remoteFileStream);
-                      remoteFileStream.on('error', function onError (err) {
-                        console.log(err);
-                        remoteFileStream.on('finish', function onFinish () {
-                            console.log("File Written Successfully");
-                          });
-                      });
 
-                  
                       fastcsv
                         .write(jsonData, { headers: true })
                         .on("finish", function() {
