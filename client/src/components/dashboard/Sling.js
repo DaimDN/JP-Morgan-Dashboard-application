@@ -65,6 +65,7 @@ const Dashboard = ({
               src="https://www.flaticon.com/svg/static/icons/svg/610/610106.svg"
               style={{width: '20%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
@@ -75,6 +76,7 @@ const Dashboard = ({
               src="https://www.flaticon.com/svg/static/icons/svg/3408/3408591.svg"
               style={{width: '20%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
@@ -86,6 +88,7 @@ const Dashboard = ({
               src="https://www.flaticon.com/svg/static/icons/svg/2257/2257295.svg"
               style={{width: '20%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
@@ -98,6 +101,7 @@ const Dashboard = ({
               src="https://www.flaticon.com/svg/static/icons/svg/1828/1828673.svg"
               style={{width: '20%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
@@ -114,6 +118,7 @@ const Dashboard = ({
               src="https://www.flaticon.com/svg/static/icons/svg/3861/3861854.svg"
               style={{width: '13%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
@@ -128,6 +133,7 @@ const Dashboard = ({
               src="https://www.flaticon.com/svg/static/icons/svg/599/599305.svg"
               style={{width: '13%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>

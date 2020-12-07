@@ -246,6 +246,7 @@ export default function DashSide() {
               src="https://www.flaticon.com/svg/static/icons/svg/610/610106.svg"
               style={{width: '30%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
@@ -256,6 +257,7 @@ export default function DashSide() {
               src="https://www.flaticon.com/svg/static/icons/svg/3408/3408591.svg"
               style={{width: '30%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
@@ -267,6 +269,7 @@ export default function DashSide() {
               src="https://www.flaticon.com/svg/static/icons/svg/2257/2257295.svg"
               style={{width: '30%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
@@ -279,6 +282,7 @@ export default function DashSide() {
               src="https://www.flaticon.com/svg/static/icons/svg/1828/1828673.svg"
               style={{width: '30%'}}
               alt="nothing"
+              className="delta"
                />
                <br/>
                <br/>
